@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+}
+
+.main-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.arrow {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
+}
+
+.arrow:hover {
+  color: #007BFF;
+}

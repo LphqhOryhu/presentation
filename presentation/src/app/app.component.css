@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.2rem;
+}
+
+.header h2 {
+  margin: 10px 0;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(100vh - 80px);
+  padding: 20px;
+}
+
+.content {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.categories, .soft-skills, .hobbies {
+  margin-top: 20px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category {
+  padding: 20px;
+  background: #007BFF;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.category:hover {
+  background: #0056b3;
+}
+
+.skills {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: #007BFF;
+  padding: 10px;
+  border: 1px solid #007BFF;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.skills span {
+  display: block;
+  margin: 5px 0;
+}
+
+.soft-skills ul, .hobbies ul {
+  list-style: none;
+  padding: 0;
+}
+
+.soft-skills li, .hobbies li {
+  margin: 5px 0;
+}
+
+.arrow {
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #007BFF;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+  color: #0056b3;
+}
+
+.arrow:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}

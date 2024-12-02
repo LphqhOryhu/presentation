@@ -1,0 +1,44 @@
+<div class="header">
+  <strong><p>{{ stages[currentStage].year }}</p></strong>
+  <p>{{ stages[currentStage].class.split('(')[1]?.replace(')', '') }} ( {{ stages[currentStage].class.split('(')[0]?.trim() }} )</p>
+  <p>{{ stages[currentStage].age }} years old</p>
+</div>
+
+<div class="main-container">
+  <button class="arrow left" (click)="previousStage()" [disabled]="currentStage === 0">←</button>
+  <div class="content">
+    <h2>Skills</h2>
+    <div class="categories">
+
+        @for(category of getCategories();track category){
+          <div
+          class="category"
+          (mouseover)="hoveredCategory = category"
+          (mouseleave)="hoveredCategory = null"
+        >
+       <p><strong>{{ category }}</strong></p>
+       @if(hoveredCategory === category){
+        <div class="skills" >
+          @for(skill of getSkills(category); track skill){
+            <span>{{ skill }}</span>
+          }
+        </div>
+       }
+      </div>
+        }
+
+    </div>
+    @if( stages[currentStage].year === "2022-2024" ){
+      <p> Multitask Kitchen Worker</p>
+      <p>ERASMUS : Sicilia</p>
+    }
+
+    @if( stages[currentStage].year === "2024-2027" ){
+      <p>Work-study program : SGA Mobility</p>
+    }
+
+  </div>
+
+
+  <button class="arrow right" (click)="nextStage()" [disabled]="currentStage === stages.length - 1">→</button>
+</div>
